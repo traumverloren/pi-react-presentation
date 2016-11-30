@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="node_modules/shower-material/styles/screen-16x10.css">
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|VT323" rel="stylesheet">
+	<script src="https://use.fontawesome.com/c811b1b704.js"></script>
 </head>
 <body class="shower list">
 	<header class="caption">
@@ -38,65 +39,248 @@
 	<section class="slide" id="cover">
 		<h2>Raspberry Pi + React</h2>
 		<h2>= Pixel Art 🤖✨🎨</h2>
-
 		<h5>Adventures in trying out new hardware, code, and having fun in a personal project</h5>
-
-		<p>By: <a href="http://stephanie.lol/">Stephanie Nemeth</a></p>
-		<!-- <img src="pictures/cover.jpg" alt="" class="cover"> -->
+		<p id="my-site"><a href="http://stephanie.lol/">stephanie.lol</a></p>
+		<p id="my-name">Stephanie Nemeth<span id="contact-details"><i class="fa fa-twitter"></i> @stephaniecodes</span></p>
 		<!--
 			To apply styles to the certain slides
 			set slide ID to get needed elements
 			-->
 		<style>
+			#cover::after {
+				visibility: hidden;
+			}
 			#cover {
 				background-color: #00BCD4;
 			}
-
 			#cover h2 {
 				margin:30px 0 0;
 				color:#FFF;
 				text-align:left;
 				font-size:40px;
 				font-family: 'Press Start 2P', cursive;
-				}
-
+			}
 			#cover h5 {
-				margin:30px 0 0;
+				margin:50px 0 30px;
 				color:#B2EBF2;
 				text-align:left;
 				font-size:40px;
 				font-family: 'VT323', cursive;
 				line-height: 100%;
-				}
-
+			}
 			#cover p {
-				margin:100px 0 0;
-				text-align:left;
 				color:#B2EBF2;
 				font-family: 'VT323';
-				font-size:30px;
-				}
+				font-size:35px;
+			}
+			#my-name {
+				line-height: 120%;
+				margin: 0 0 0;
+				text-align:left;
+			}
 			#cover a {
 				color:#B2EBF2;
-				text-decoration: none;
+			}
+			.slide i {
+				font-style: normal;
+			}
+			#contact-details {
+				margin-left:318px;
+			}
+			#my-site {
+				margin: 110px 0 0;
+				line-height: 120%;
+				text-align: right;
+				}
+		</style>
+	</section>
+	<section class="slide" id="about-me">
+		<h2>Hi, I'm Stephanie.</h2>
+		<ul>
+			<li class="next">[self-taught] Full-stack Ruby on Rails developer</li>
+			<li class="next">Regularly host a <a href="https://www.meetup.com/Bitches-and-Bytes">coffee + code</a> small coding group ☕️+💻</li>
+			<li class="next">Co-organized <a href="http://stupidhackathon.wtf">Stupid Hackathon Amsterdam</a> 💩🛠</li>
+			<li class="next">Currently looking for a new opportunity 👀 </li>
+		</ul>
+		<style>
+			#about-me h2 {
+				color:#212121;
+				font-family: 'Press Start 2P', cursive;
+				font-size: 1.6em;
+				}
+			#about-me a {
+				color: #00BCD4;
 			}
 		</style>
 	</section>
-	<section class="slide">
-		<h2>Shower key features</h2>
-		<ol>
-			<li>Built on HTML, CSS and vanilla JavaScript</li>
-			<li>Works in all modern browsers</li>
-			<li>Themes are separated from engine</li>
-			<li>Modular and extensible</li>
-			<li>Fully keyboard accessible</li>
-			<li>Printable to PDF</li>
-		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+	<section class="slide" id="geolize">
+		<div class="marquee"><h2>Stuff I like to build</h2></div>
+		<p id="quote">"I value projects that have no value or real usefulness."</p>
+		<p>- Stephanie Nemeth</p>
+		<img src="images/DancingBanana.gif" />
+		<img src="images/DancingBanana.gif" />
+		<img src="images/DancingBanana.gif" />
+		<p id="small"><a href="https://github.com/StupidHackathonAMS/geolize.css"> https://github.com/StupidHackathonAMS/geolize.css</a></p>
+		<style>
+		#geolize {
+  		background-image: url('images/main-background.gif');
+			text-align: center;
+		}
+
+		#geolize h2 {
+			font-family: "Comic Sans MS", serif;
+		  color: yellow;
+			line-height: 120%;
+			font-size: 2em;
+		}
+		#geolize #quote {
+			margin: auto;
+		  background-color: AliceBlue;
+		  background-image: url('images/quote-background.jpg');
+			line-height: 1.3;
+			color: black;
+			width: 80%;
+		  padding: 50px;
+		  border: 5px solid red;
+		}
+
+		#geolize p {
+			font-family: "Comic Sans MS", serif;
+			font-size: 1.5em;
+			font-style: italic;
+		}
+
+		#geolize #small a {
+			font-family: "Times New Roman", serif;
+			font-size: .5em;
+			font-style: normal;
+			color: #fff;
+		}
+
+		.marquee {
+		  height: 80px;
+		  overflow: hidden;
+		  position: relative;
+		}
+		.marquee h2 {
+			position: absolute;
+			width: 60%;
+			height: 100%;
+			margin: 0;
+			line-height: 70px;
+			text-align: left;
+			-moz-animation: marquee 5s linear infinite alternate;
+			-webkit-animation: marquee 5s linear infinite alternate;
+			animation: marquee 5s linear infinite alternate;
+			}
+
+			@-moz-keyframes marquee {
+			 0%   { -moz-transform: translateX(70%); }
+			 100% { -moz-transform: translateX(0%); }
+			}
+			@-webkit-keyframes marquee {
+			 0%   { -webkit-transform: translateX(70%); }
+			 100% { -webkit-transform: translateX(0%); }
+			}
+			@keyframes marquee {
+			 0%   {
+			 -moz-transform: translateX(70%);
+			 -webkit-transform: translateX(70%);
+			 transform: translateX(70%);
+			 }
+			 100% {
+			 -moz-transform: translateX(0%);
+			 -webkit-transform: translateX(0%);
+			 transform: translateX(0%);
+			 }
+			}
+		</style>
 	</section>
-	<section class="slide">
-		<h2>Plain text on your slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+
+	<section class="slide" id="slide">
+		<h2>My project</h2>
+
+		<ul>
+
+		</ul>
+		<style>
+			#slide h2 {
+				color:#212121;
+				font-family: 'Press Start 2P', cursive;
+				font-size: 1.6em;
+				}
+			#slide a {
+				color: #00BCD4;
+			}
+		</style>
+	</section>
+	<section class="slide" id="stedelijk">
+		<h2 class="shout">It all started with a visit to the Stedelijk...</h2>
+		<style>
+		.slide .shout::after {
+			position:absolute;
+			top:-300%;
+			right:0;
+			bottom:-300%;
+			left:0;
+			z-index:-1;
+			background:#00BCD4 linear-gradient(135deg,#00BCD4 50%,#00a5bb 50%) no-repeat;
+			content:'';
+		}
+	 	.slide .shout  {
+			position:absolute;
+			top:50%;
+			left:0;
+			z-index:1;
+			padding-left:96px;
+			width:100%;
+			color:white;
+			line-height:1.1;
+			font-size:112px;
+			transform:translateY(-50%);
+			font-family: 'Press Start 2P', cursive;
+			line-height: 120%;
+		  font-size: 1.6em;
+			color: #fff;
+		}
+		</style>
+	</section>
+	<section class="slide" id="tinguely">
+		<h2>Jean Tinguely</h2>
+		<img class="cover" src="../images/tinguely.jpg" />
+		<p id="photo-credit">http://www.flickriver.com/photos/46774986@N02/17028829322/</p>
+
+		<style>
+		#tinguely h2 {
+			color:#212121;
+			text-align:left;
+			font-size:40px;
+			font-family: 'Press Start 2P', cursive;
+		}
+		#photo-credit {
+			position: fixed;
+			bottom: 0;
+			font-size: 12px;
+			color: #fff;
+		}
+		</style>
+	</section>
+	<section class="slide" id="quote">
+		<h2>Self-Destructing Art</h2>
+		<figure>
+			<blockquote>
+				<p>I wanted something ephemeral, that would pass like a falling star and, most importantly, that would be impossible for museums to reabsorb. I didn't want it to be 'museumised'. The work had to pass by, make people dream and talk, and that would be all, the next day nothing would be left, everything would go back to the garbage bins.</p>
+			</blockquote>
+			<figcaption>Jean Tinguely</figcaption>
+		</figure>
+		<style>
+		#quote h2 {
+			color:#212121;
+			text-align:left;
+			font-size:40px;
+			font-family: 'Press Start 2P', cursive;
+		}
+		</style>
 	</section>
 	<section class="slide">
 		<h2>Two columns if you like</h2>
@@ -116,15 +300,6 @@
 			</li>
 			<li>Look, seven rows exactly!</li>
 		</ol>
-	</section>
-	<section class="slide">
-		<h2>Serious citations</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
 	</section>
 	<section class="slide">
 		<h2>Code samples</h2>
