@@ -1,42 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Shower Presentation Engine</title>
+	<title>Raspberry Pi + React = Pixel Art 🤖</title>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+	<link rel="stylesheet" href="shower/themes/material/styles/screen-16x10.css">
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|VT323" rel="stylesheet">
 </head>
 <body class="shower list">
 	<header class="caption">
-		<h1>Shower Presentation Engine</h1>
-		<p>Yours Truly, Famous Inc.</p>
+		<h1>Raspberry Pi + React = Pixel Art 🤖✨🎨</h1>
+		<h5>Adventures in trying out new hardware, code, and having fun in a personal project</h5>
+		<p>By Stephanie Nemeth</p>
+		<style>
+		.caption {
+		  background: #00BCD4 linear-gradient(135deg,#00BCD4 50%,#00a5bb 50%) no-repeat;
+		}
+		.caption h1 {
+		  font-family: 'Press Start 2P', cursive;
+			line-height: 120%;
+		  font-size: 0.7em;
+		}
+
+		.caption h5 {
+		  font-family: 'VT323', cursive;
+			color:#B2EBF2;
+			font-size: 0.7em;
+		}
+		.caption p {
+			margin-top: 10px;
+		  font-family: 'VT323', cursive;
+		  color: #757575;
+		}
+		</style>
 	</header>
 	<section class="slide" id="cover">
-		<h2>Shower Presentation Engine</h2>
-		<p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
-		<img src="pictures/cover.jpg" alt="" class="cover">
+		<h2>Raspberry Pi + React</h2>
+		<h2>= Pixel Art 🤖✨🎨</h2>
+
+		<h5>Adventures in trying out new hardware, code, and having fun in a personal project</h5>
+
+		<p>By: <a href="http://stephanie.lol/">Stephanie Nemeth</a></p>
+		<!-- <img src="pictures/cover.jpg" alt="" class="cover"> -->
 		<!--
 			To apply styles to the certain slides
 			set slide ID to get needed elements
 			-->
 		<style>
+			#cover {
+				background-color: #00BCD4;
+			}
+
 			#cover h2 {
 				margin:30px 0 0;
 				color:#FFF;
-				text-align:center;
-				font-size:70px;
+				text-align:left;
+				font-size:40px;
+				font-family: 'Press Start 2P', cursive;
 				}
+
+			#cover h5 {
+				margin:30px 0 0;
+				color:#B2EBF2;
+				text-align:left;
+				font-size:40px;
+				font-family: 'VT323', cursive;
+				line-height: 100%;
+				}
+
 			#cover p {
-				margin:10px 0 0;
-				text-align:center;
-				color:#FFF;
-				font-style:italic;
-				font-size:20px;
+				margin:100px 0 0;
+				text-align:left;
+				color:#B2EBF2;
+				font-family: 'VT323';
+				font-size:30px;
 				}
-				#cover p a {
-					color:#FFF;
-					}
+			#cover a {
+				color:#B2EBF2;
+				text-decoration: none;
+			}
 		</style>
 	</section>
 	<section class="slide">
@@ -156,24 +199,7 @@
 	<section class="slide grid">
 		<h2>All nicely aligned to grid</h2>
 	</section>
-	<section class="slide" id="see-more">
-		<h2 class="shout">
-			<img src="pictures/logo.svg" alt="Shower logo">
-			<a href="https://github.com/shower/shower">See more on GitHub</a>
-		</h2>
-		<style>
-			#see-more h2 {
-				font-size:100px
-				}
-			#see-more img {
-				width:0.72em;
-				height:0.72em;
-				}
-		</style>
-	</section>
-	<p class="badge">
-		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
-	</p>
+
 	<!--
 		To hide progress bar from entire presentation
 		just remove “progress” element.
