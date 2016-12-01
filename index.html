@@ -196,7 +196,7 @@
 		</style>
 	</section>
 	<section class="slide" id="my-project">
-		<h2>Stuff I Used</h2>
+		<h2>Stuff For This Project</h2>
 		<img class="place left next" src="images/raspberry_pi.jpg">
 		<span class="plus next"><i class="fa fa-plus fa-2x"></i></span>
 		<img class="place center next" src="images/unicorn_hat.jpg">
@@ -206,7 +206,7 @@
 			#my-project h2 {
 				color:#212121;
 				font-family: 'Press Start 2P', cursive;
-				font-size: 1.6em;
+				font-size: 1.4em;
 				}
 			#my-project a {
 				color: #00BCD4;
@@ -226,7 +226,7 @@
 		</style>
 	</section>
 	<section class="slide" id="my-project2">
-		<h2>My project in action</h2>
+		<h2>What It Does</h2>
 		<video class="place center" width="640" height="480" controls>
 			<source src="images/react-native-demo.mp4" type="video/mp4">
 			Your browser does not support the video tag.
@@ -242,6 +242,9 @@
 			}
 		</style>
 	</section>
+	<!-- <section class="slide" id="how-did-i">
+		<h2 class="shout">So, why did I build this? 🤔</h2>
+	</section> -->
 	<section class="slide" id="stedelijk">
 		<h2 class="shout">It all started with a visit to the Stedelijk Museum...</h2>
 		<style>
@@ -263,7 +266,6 @@
 			padding-left:96px;
 			width:100%;
 			color:white;
-			line-height:1.1;
 			font-size:112px;
 			transform:translateY(-50%);
 			font-family: 'Press Start 2P', cursive;
@@ -367,7 +369,7 @@
 		</style>
 	</section>
 	<section class="slide" id="my-vision">
-		<h2>My Game Plan</h2>
+		<h2>My Main Requirement</h2>
 		<p>Raspberry Pi must be accessible from the app anywhere, not just localhost!</p>
 
 		<img class="place bottom center" src="images/gameplan-react.png" />
@@ -388,10 +390,10 @@
 	<section class="slide" id="socket-intro">
 		<h2>Socket.IO makes communication a breeze</h2>
 		<ul>
-			<li>Enables real-time bidirectional event-based communication</li>
-			<li>Works on every platform, browser or device 💪</li>
-			<li>Uses the WebSocket protocol with long polling as a fallback option</li>
-			<li>Has client-side libraries for Python and React! 🎉</li>
+			<li class="next">Enables real-time bidirectional event-based communication</li>
+			<li class="next">Works on every platform, browser or device 💪</li>
+			<li class="next">Uses the WebSocket protocol with long polling as a fallback option</li>
+			<li class="next">Has client-side libraries for Python and React! 🎉</li>
 		</ul>
 		<style>
 			#socket-intro h2 {
@@ -423,7 +425,7 @@
 		<pre>
 			<code>var server = http.createServer(app);</code>
 			<code class="mark">var io = require('socket.io').listen(server);</code>
-			<code>io.on('connection', function(socket){</code>
+			<code class="mark">io.on('connection', function(socket){</code>
 			<code>	console.log("CLIENT CONNECTED 💃 ");</code>
 			<code class="mark">	socket.on('stateChanged', function(state){</code>
 			<code>		io.emit("updateState", state);</code>
@@ -437,6 +439,64 @@
 				font-size: 1.6em;
 				}
 
+		</style>
+	</section>
+	<section class="slide" id="pi-client">
+		<h2>Setting Up the Pi Client</h2>
+		<pre>
+			<code>from socketIO_client import SocketIO</code>
+			<code class="mark">socketIO = SocketIO('https://light-art.herokuapp.com')</code>
+			<code>def updateState(data):</code>
+			<code>	squares = data['squares']</code>
+			<code> </code>
+			<code>def main():</code>
+			<code>	# Listen</code>
+			<code class="mark">	socketIO.on('connect', connect)</code>
+			<code> </code>
+			<code>	# Gets msg from other client!</code>
+			<code class="mark">	socketIO.on('updateState', updateState)</code>
+		</pre>
+		<style>
+			#pi-client::after {
+				visibility: hidden;
+			}
+			#pi-client h2 {
+				color:#212121;
+				font-family: 'Press Start 2P', cursive;
+				font-size: 1.4em;
+				}
+			#pi-client code {
+				line-height: 150%;
+			}
+		</style>
+	</section>
+	<section class="slide" id="react-client">
+		<h2>Setting Up React Client</h2>
+		<pre>
+			<code>import React, { Component } from 'react'</code>
+			<code class="mark">import io from 'socket.io-client'</code>
+			<code class="mark">let socket = io('https://light-art.herokuapp.com', {})</code>
+			<code>class App extends Component {</code>
+			<code>...</code>
+			<code>	sendMessage = (status, data) => {</code>
+			<code class="mark">		socket.emit('stateChanged',</code>
+			<code>		{message: "Light Design Submitted",</code>
+			<code>		squares: this.state.squares })</code>
+			<code>	}</code>
+			<code>}</code>
+		</pre>
+		<style>
+			#react-client::after {
+				visibility: hidden;
+			}
+			#react-client h2 {
+				color:#212121;
+				font-family: 'Press Start 2P', cursive;
+				font-size: 1.4em;
+				}
+			#react-client code {
+				line-height: 150%;
+			}
 		</style>
 	</section>
 	<section class="slide">
