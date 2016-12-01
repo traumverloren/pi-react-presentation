@@ -446,14 +446,12 @@
 		<pre>
 			<code>from socketIO_client import SocketIO</code>
 			<code class="mark">socketIO = SocketIO('https://light-art.herokuapp.com')</code>
-			<code>def updateState(data):</code>
-			<code>	squares = data['squares']</code>
 			<code> </code>
 			<code>def main():</code>
 			<code>	# Listen</code>
 			<code class="mark">	socketIO.on('connect', connect)</code>
 			<code> </code>
-			<code>	# Gets msg from other client!</code>
+			<code>	# Receive a message from a react client!</code>
 			<code class="mark">	socketIO.on('updateState', updateState)</code>
 		</pre>
 		<style>
