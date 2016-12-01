@@ -473,7 +473,7 @@
 		<pre>
 			<code>import React, { Component } from 'react'</code>
 			<code class="mark">import io from 'socket.io-client'</code>
-			<code class="mark">let socket = io('https://light-art.herokuapp.com', {})</code>
+			<code class="mark">const socket = io('https://light-art.herokuapp.com', {})</code>
 			<code>class App extends Component {</code>
 			<code>...</code>
 			<code>	sendMessage = (status, data) => {</code>
@@ -497,12 +497,19 @@
 			}
 		</style>
 	</section>
+	</section>
 	<section class="slide" id="react-native">
 		<h2>React Native Lessons Learned</h2>
 		<ul>
-			<li></li>
-			<li>Has an established Python library! 💪</li>
+			<li class="next">It <b>IS NOT</b> "write once, run anywhere."</li>
+			<li class="next">It <b>IS</b> "learn once, write anywhere.”</li>
+			<li class="next">Try out <a href="https://getexponent.com">getexponent.com</a></li>
+			<ul>
+				<li class="next">User friendly, easy to share and view your app on your own device</li>
+				<li class="next">Don't have to open Xcode or Android Studio, or write any native code.</li>
+			</ul>
 		</ul>
+
 		<style>
 			#react-native h2 {
 				color:#212121;
@@ -510,7 +517,9 @@
 				font-size: 1.2em;
 				line-height: 130%;
 			}
-
+			#react-native a {
+				color:#00BCD4;
+			}
 		</style>
 	</section>
 	<section class="slide">
@@ -605,6 +614,22 @@
 	<section class="slide grid">
 		<h2>All nicely aligned to grid</h2>
 	</section>
+	<section class="slide" id="react-native">
+		<h2>React Native Lessons Learned</h2>
+		<p class="next">It <b>IS NOT</b> "write once, run anywhere."</p>
+		<p class="next">It <b>IS</b> "learn once, write anywhere.”</p>
+		<style>
+			#react-native h2 {
+				color:#212121;
+				font-family: 'Press Start 2P', cursive;
+				font-size: 1.2em;
+				line-height: 130%;
+			}
+			#react-native p {
+				text-align: center;
+				font-size: 1.4em;
+			}
+		</style>
 
 	<!--
 		To hide progress bar from entire presentation
