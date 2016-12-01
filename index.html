@@ -398,6 +398,7 @@
 				color:#212121;
 				font-family: 'Press Start 2P', cursive;
 				font-size: 1.4em;
+				line-height: 110%;
 				}
 		</style>
 	</section>
@@ -418,15 +419,16 @@
 		</style>
 	</section>
 	<section class="slide" id="socket-io">
-		<h2>My build strategy</h2>
+		<h2>Setting Up the Server</h2>
 		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code class="mark">&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
+			<code>var server = http.createServer(app);</code>
+			<code class="mark">var io = require('socket.io').listen(server);</code>
+			<code>io.on('connection', function(socket){</code>
+			<code>	console.log("CLIENT CONNECTED 💃 ");</code>
+			<code class="mark">	socket.on('stateChanged', function(state){</code>
+			<code>		io.emit("updateState", state);</code>
+			<code>	});</code>
+			<code>});</code>
 		</pre>
 		<style>
 			#socket-io h2 {
