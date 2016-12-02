@@ -6,10 +6,40 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="node_modules/shower-material/styles/screen-16x10.css">
-	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|VT323" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|VT323" rel="stylesheet"> -->
+	<link href
 	<script src="https://use.fontawesome.com/c811b1b704.js"></script>
 </head>
 <body class="shower list">
+	<style>
+		/* vt323-regular - latin */
+		@font-face {
+			font-family: 'VT323';
+			font-style: normal;
+			font-weight: 400;
+			src: url('fonts/vt323-v7-latin-regular.eot'); /* IE9 Compat Modes */
+			src: local('VT323'), local('VT323-Regular'),
+					 url('fonts/vt323-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+					 url('fonts/vt323-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+					 url('fonts/vt323-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+					 url('fonts/vt323-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+					 url('fonts/vt323-v7-latin-regular.svg#VT323') format('svg'); /* Legacy iOS */
+		}
+
+		/* press-start-2p-regular - latin */
+		@font-face {
+			font-family: 'Press Start 2P';
+			font-style: normal;
+			font-weight: 400;
+			src: url('fonts/press-start-2p-v4-latin-regular.eot'); /* IE9 Compat Modes */
+			src: local('Press Start 2P'), local('PressStart2P-Regular'),
+					 url('fonts/press-start-2p-v4-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+					 url('fonts/press-start-2p-v4-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+					 url('fonts/press-start-2p-v4-latin-regular.woff') format('woff'), /* Modern Browsers */
+					 url('fonts/press-start-2p-v4-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+					 url('fonts/press-start-2p-v4-latin-regular.svg#PressStart2P') format('svg'); /* Legacy iOS */
+		}
+	</style>
 	<header class="caption">
 		<h1>Raspberry Pi + React = Pixel Art 🤖✨🎨</h1>
 		<h5>Adventures in trying out new hardware, code, and having fun in a personal project</h5>
@@ -85,7 +115,7 @@
 				font-style: normal;
 			}
 			#contact-details {
-				margin-left:318px;
+				margin-left:350px;
 			}
 			#my-site {
 				margin: 110px 0 0;
@@ -96,9 +126,11 @@
 	</section>
 	<section class="slide" id="about-me">
 		<h2>Hi, I'm Stephanie.</h2>
+		<img class="place top left" src="images/burningman.jpg" />
+		<p><em>* I once built a fiber optic dress.</em></p>
 		<ul>
 			<li class="next">[self-taught] Full-stack Ruby on Rails developer</li>
-			<li class="next">Regularly host a <a href="https://www.meetup.com/Bitches-and-Bytes">coffee + code</a> small coding group ☕️+💻</li>
+			<li class="next">Regularly host a <a href="https://www.meetup.com/Bitches-and-Bytes">coffee + code</a> small code group ☕️+💻</li>
 			<li class="next">Co-organized <a href="http://stupidhackathon.wtf">Stupid Hackathon Amsterdam</a> 💩🛠</li>
 			<li class="next">Currently looking for a new opportunity 👀 </li>
 		</ul>
@@ -107,8 +139,46 @@
 				color:#212121;
 				font-family: 'Press Start 2P', cursive;
 				font-size: 1.2em;
-				}
+			}
+			#about-me ul {
+				margin-top: -350px;
+				margin-left: 322px;
+				font-size: 0.85em;
+				line-height: 250%;
+			}
+			#about-me p {
+				margin-top: 365px;
+				margin-left: -40px;
+				font-size: 0.8em;
+			}
 			#about-me a {
+				color: #00BCD4;
+			}
+			#about-me img {
+				margin-left: 10px;
+				height: 330px;
+				width: auto;
+				margin-top: 170px;
+			}
+		</style>
+	</section>
+	<section class="slide" id="why-why-why">
+		<h2>Overview</h2>
+		<ul>
+			<li class="next">Thing I built</li>
+			<li class="next">Why I had this idea</li>
+			<li class="next">Build highlights</li>
+			<li class="next">Lessons learned</li>
+			<li class="next">Demo!</li>
+			<li class="next">Final thoughts</li>
+		</ul>
+		<style>
+			#why-why-why h2 {
+				color:#212121;
+				font-family: 'Press Start 2P', cursive;
+				font-size: 1.2em;
+				}
+			#why-why-why a {
 				color: #00BCD4;
 			}
 		</style>
@@ -192,6 +262,23 @@
 			}
 		</style>
 	</section>
+	<section class="slide" id="my-project2">
+		<h2>What It Does</h2>
+		<video class="place center" width="640" height="480" controls>
+			<source src="images/react-native-demo.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+		<style>
+			#my-project2 h2 {
+				color:#212121;
+				font-family: 'Press Start 2P', cursive;
+				font-size: 1.2em;
+				}
+			#my-project2 video {
+				margin-top: 30px;
+			}
+		</style>
+	</section>
 	<section class="slide" id="my-project">
 		<h2>Stuff For This Project</h2>
 		<img class="place left next" src="images/raspberry_pi.jpg">
@@ -219,23 +306,6 @@
 			.plus2 i {
 				margin-top: 140px;
 				margin-left: 330px;
-			}
-		</style>
-	</section>
-	<section class="slide" id="my-project2">
-		<h2>What It Does</h2>
-		<video class="place center" width="640" height="480" controls>
-			<source src="images/react-native-demo.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-		</video>
-		<style>
-			#my-project2 h2 {
-				color:#212121;
-				font-family: 'Press Start 2P', cursive;
-				font-size: 1.2em;
-				}
-			#my-project2 video {
-				margin-top: 30px;
 			}
 		</style>
 	</section>
@@ -522,115 +592,9 @@
 			}
 		</style>
 	</section>
-	<section class="slide">
-		<h2>Two columns if you like</h2>
-		<p class="double">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+	<section class="slide" id="how-did-i">
+		<h2 class="shout">Enough talk, let's demo!   🎉✨👾🎨💩🦄</h2>
 	</section>
-	<section class="slide">
-		<h2>All kind of lists</h2>
-		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
-				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
-				</ul>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
-	</section>
-	<section class="slide">
-		<h2>Code samples</h2>
-		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code class="mark">&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
-		</pre>
-	</section>
-	<section class="slide">
-		<h2>Even tables</h2>
-		<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
-		</table>
-		<p>It’s good to have information organized.</p>
-	</section>
-	<section class="slide" id="picture">
-		<h2>Pictures</h2>
-		<img src="pictures/picture.jpg" alt="" class="cover">
-		<style>
-			#picture h2 {
-				color:#FFF;
-				}
-		</style>
-	</section>
-	<section class="slide">
-		<h2 class="shout shrink">You can even shout this way</h2>
-	</section>
-	<section class="slide">
-		<h2>Inner navigation</h2>
-		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
-		</ol>
-	</section>
-	<section class="slide grid">
-		<h2>All nicely aligned to grid</h2>
-	</section>
-	<section class="slide" id="react-native">
-		<h2>React Native Lessons Learned</h2>
-		<p class="next">It <b>IS NOT</b> "write once, run anywhere."</p>
-		<p class="next">It <b>IS</b> "learn once, write anywhere.”</p>
-		<style>
-			#react-native h2 {
-				color:#212121;
-				font-family: 'Press Start 2P', cursive;
-				font-size: 1.2em;
-				line-height: 130%;
-			}
-			#react-native p {
-				text-align: center;
-				font-size: 1.4em;
-			}
-		</style>
-
 	<!--
 		To hide progress bar from entire presentation
 		just remove “progress” element.
