@@ -127,12 +127,12 @@
 	<section class="slide" id="about-me">
 		<h2>Hi, I'm Stephanie.</h2>
 		<img class="place top left" src="images/burningman.jpg" />
-		<p><em>* I once built a fiber optic dress.</em></p>
+		<p><em>* I built a fiber optic dress once.</em></p>
 		<ul>
 			<li class="next">[self-taught] Full-stack Ruby on Rails developer</li>
 			<li class="next">Regularly host a <a href="https://www.meetup.com/Bitches-and-Bytes">coffee + code</a> small code group ☕️+💻</li>
 			<li class="next">Co-organized <a href="http://stupidhackathon.wtf">Stupid Hackathon Amsterdam</a> 💩🛠</li>
-			<li class="next">Currently looking for a new opportunity 👀 </li>
+			<li class="next">Currently looking for a new [Ruby, React, JS] job 👀 </li>
 		</ul>
 		<style>
 			#about-me h2 {
@@ -165,11 +165,11 @@
 	<section class="slide" id="why-why-why">
 		<h2>Overview</h2>
 		<ul>
-			<li class="next">Thing I built</li>
+			<li class="next">What I built</li>
 			<li class="next">Why I had this idea</li>
 			<li class="next">Build highlights</li>
-			<li class="next">Lessons learned</li>
 			<li class="next">Demo!</li>
+			<li class="next">Lessons learned</li>
 			<li class="next">Final thoughts</li>
 		</ul>
 		<style>
@@ -344,7 +344,7 @@
 	</section>
 	<section class="slide" id="tinguely">
 		<h2>Jean Tinguely</h2>
-		<img class="cover" src="images/tinguely.jpg" />
+		<img class="cover width" src="images/tinguely.jpg" />
 		<p id="photo-credit">http://www.flickriver.com/photos/46774986@N02/17028829322/</p>
 		<style>
 		#tinguely h2 {
@@ -352,6 +352,7 @@
 			text-align:left;
 			font-size:1.2em;
 			font-family: 'Press Start 2P', cursive;
+			margin-left: 40px;
 		}
 		#photo-credit {
 			position: fixed;
@@ -380,20 +381,15 @@
 	</section>
 	<section class="slide" id="dream-build">
 		<h2>What I dreamed of</h2>
-		<img class="place bottom center" src="images/tinguely-art.jpg">
+		<img class="cover width" src="images/tinguely-art.jpg">
 		<style>
 			#dream-build h2 {
 				color:#212121;
 				font-family: 'Press Start 2P', cursive;
 				font-size: 1.2em;
+				margin-top: 470px;
+				margin-left: 325px;
 				}
-			#dream-build a {
-				color: #00BCD4;
-			}
-			#dream-build img {
-				height: 480px;
-				width: auto;
-			}
 		</style>
 	</section>
 	<section class="slide" id="reality-check">
@@ -403,7 +399,7 @@
 		<p class="next"><i class="fa fa-check"></i> Want to focus on the software not necessarily hardware 🤔</p>
 		<ul>
 			<ul>
-				<li class="next"><b>Must-have:</b> write the frontend in React & React Native 💃</li>
+				<li class="next"><b>Must-have:</b> write the frontend in React & React Native 🤓</li>
 			</ul>
 		</ul>
 		<p class="next"><i class="fa fa-check"></i> Optimize for success rather than discouragement 🏆</p>
@@ -418,8 +414,9 @@
 	<section class="slide" id="solution">
 		<h2>Solution: Unicorn HAT!</h2>
 		<ul>
-			<li>64-Led board (<b>H</b>ardware <b>A</b>ttached on <b>T</b>op)</li>
-			<li>Has an established Python library! 💪</li>
+			<li class="next">64-Led board (<b>H</b>ardware <b>A</b>ttached on <b>T</b>op)</li>
+			<li class="next">No soldering! 💃</li>
+			<li class="next">Has an established Python library! 💪</li>
 		</ul>
 		<img src="images/unicorn_hat.jpg">
 		<img src="images/unicorn_back.jpg">
@@ -454,6 +451,22 @@
 			}
 		</style>
 	</section>
+	<section class="slide" id="my-project3">
+		<h2>How does it send messages?</h2>
+		<img class="place center" src="images/projectschema.png" />
+		<style>
+			#my-project3 h2 {
+				color:#212121;
+				font-family: 'Press Start 2P', cursive;
+				font-size: 1.2em;
+				}
+			#my-project3 img {
+				padding-top: 80px;
+				width: 650px;
+				height: auto;
+			}
+		</style>
+	</section>
 	<section class="slide" id="socket-intro">
 		<h2>Socket.IO makes communication a breeze</h2>
 		<ul>
@@ -469,22 +482,6 @@
 				font-size: 1.2em;
 				line-height: 130%;
 				}
-		</style>
-	</section>
-	<section class="slide" id="my-project3">
-		<h2>Final Build Strategy</h2>
-		<img class="place center" src="images/projectschema.png" />
-		<style>
-			#my-project3 h2 {
-				color:#212121;
-				font-family: 'Press Start 2P', cursive;
-				font-size: 1.2em;
-				}
-			#my-project3 img {
-				padding-top: 80px;
-				width: 650px;
-				height: auto;
-			}
 		</style>
 	</section>
 	<section class="slide" id="socket-io">
@@ -508,7 +505,6 @@
 			.slide pre code:not(:only-child).mark {
 				background: #B2EBF2;
 			}
-
 		</style>
 	</section>
 	<section class="slide" id="pi-client">
@@ -544,6 +540,7 @@
 			<code>import React, { Component } from 'react'</code>
 			<code class="mark">import io from 'socket.io-client'</code>
 			<code class="mark">const socket = io('https://light-art.herokuapp.com', {})</code>
+			<code> </code>
 			<code>class App extends Component {</code>
 			<code>...</code>
 			<code>	sendMessage = (status, data) => {</code>
@@ -568,23 +565,99 @@
 		</style>
 	</section>
 	</section>
-	<section class="slide" id="react-native">
-		<h2>React Native Lessons Learned</h2>
+	<section class="slide" id="demo-time">
+		<h2 class="shout">Let's demo this thing!! 🎉✨👾🎨💩🦄</h2>
+	</section>
+	<section class="slide" id="demo-url">
+		<h2>Try it out!</h2>
 		<ul>
-			<li class="next">It <b>IS NOT</b> "write once, run anywhere."</li>
-			<li class="next">It <b>IS</b> "learn once, write anywhere.”</li>
-			<li class="next">Try out <a href="https://getexponent.com">getexponent.com</a></li>
+			<li>React App:</li>
+			<ul>
+				<li><a href="https://light-art.herokuapp.com">https://light-art.herokuapp.com</a></li>
+			</ul>
+			<li>React Native App:</li>
+			<ul>
+				<li>I will demo via the awesome <a href="https://getexponent.com">ExponentJS</a></li>
+			</ul>
+		</ul>
+		<style>
+		#demo-url h2 {
+			color:#212121;
+			font-family: 'Press Start 2P', cursive;
+			font-size: 1.2em;
+		}
+		#demo-url p {
+			font-size: 1.5em;
+		}
+		#demo-url a {
+			color:#00BCD4;
+		}
+		</style>
+	</section>
+	<section class="slide" id="pi-lessons">
+		<h2>Lessons Learned: Raspberry Pi</h2>
+		<ul>
+			<li class="next">It's really easy to get started building with a Pi!</li>
+			<li class="next">I was intimidated for a long time by Pis and Arduinos. Ugh, how do I choose?!</li>
+			<li class="next"><b>Recommendation:</b> A Pi starter kit makes starting a breeze. 🏝</li>
+			<ul>
+				<li class="next">Includes everything to get started: power supply, pi, & pre-formatted SD card</li>
+			</ul>
+			<li class="next">Check out <a href="https://www.pimoroni.co.uk">Pimoroni</a> (that's where I got my stuff) 👍💯🕶</li>
+
+		</ul>
+		<style>
+			#pi-lessons h2 {
+				color:#212121;
+				font-family: 'Press Start 2P', cursive;
+				font-size: 1.1em;
+				line-height: 130%;
+			}
+			#pi-lessons a {
+				color:#00BCD4;
+			}
+		</style>
+	</section>
+	<section class="slide" id="pi-lessons-2">
+		<h2>Lessons Learned: Raspberry Pi</h2>
+		<ul>
+			<li class="next">Wanna do more than light a single LED but intimidated by soldering or wiring or capacitors straight away?</li>
+			<li class="next">Look into HATs! Easily plugs into your Pi's RGPIO and usually has an established python library available!</li>
+			<li class="next">There's all kinds of HATs...</li>
+			<h2># TODO: ALL THE HATS</h2>
+		</ul>
+		<style>
+			#pi-lessons-2 h2 {
+				color:#212121;
+				font-family: 'Press Start 2P', cursive;
+				font-size: 1.1em;
+				line-height: 130%;
+			}
+			#pi-lessons-2 a {
+				color:#00BCD4;
+			}
+		</style>
+	</section>
+	<section class="slide" id="react-native">
+		<h2>Lessons Learned: React & React Native</h2>
+		<ul>
+			<li class="next">These frameworks <b>ARE NOT</b> "write once, run anywhere."</li>
+			<li class="next">These frameworks <b>ARE</b> "learn once, write anywhere.”</li>
+			<li class="next">Wanna try React Native? Check out <a href="https://getexponent.com">ExponentJS</a>!</li>
 			<ul>
 				<li class="next">User friendly, easy to share and view your app on your own device</li>
 				<li class="next">Don't have to open Xcode or Android Studio, or write any native code.</li>
 			</ul>
+			<li class="next">Less pre-built OSS components available for React Native ⚠️</li>
+			<ul>
+				<li class="next">e.g. I had to build my own color picker for React Native app</li>
+			</ul>
 		</ul>
-
 		<style>
 			#react-native h2 {
 				color:#212121;
 				font-family: 'Press Start 2P', cursive;
-				font-size: 1.2em;
+				font-size: 1.1em;
 				line-height: 130%;
 			}
 			#react-native a {
@@ -592,8 +665,109 @@
 			}
 		</style>
 	</section>
-	<section class="slide" id="how-did-i">
-		<h2 class="shout">Enough talk, let's demo!   🎉✨👾🎨💩🦄</h2>
+	<section class="slide" id="final-thoughts-2">
+		<h2>Final Thoughts 🤔</h2>
+		<ul>
+			<li class="next">I had never written any Python or React Native code before this project.</li>
+			<li class="next">I had never built anything using WebSockets or Socket.IO before.</li>
+			<li class="next">I had never built an Express server before.</li>
+			<li class="next">I had never written for hardware before.</li>
+			<li class="next">I had never combined so many languages into one project.</li>
+			<li class="next">Despite all these "<b>nevers</b>", I managed to pull off a cool project using a Pi. 💅</li>
+
+		</ul>
+		<style>
+			#final-thoughts-2 h2 {
+				color:#212121;
+				font-family: 'Press Start 2P', cursive;
+				font-size: 1.1em;
+				line-height: 130%;
+			}
+		</style>
+	</section>
+	<section class="slide" id="final-thoughts">
+		<img src="images/Dog-Thinks-Parade-All-Him.jpg" class="cover width" alt="">
+		<p>Don't let what you think are your insufficiencies hold you back in tackling the stuff you really wanna build-- find a way to optimize for your own success.</p>
+		<style>
+			#final-thoughts p {
+				background-color: #fff;
+				opacity: 0.65;
+				border-radius: 10px;
+				margin-top: 300px;
+				padding: 0 10px 0 10px;
+				font-size: 1.2em;
+			}
+			#final-thoughts::after {
+				visibility: hidden;
+			}
+		</style>
+	</section>
+	<section class="slide" id="thanks">
+		<h2>Thank you!</h2>
+		<h5>Now go build something useless. 💩🛠💜</h5>
+		<h6 class="slides-url">Slides available at <a href="stephanie.lol/pi-react-presentation">stephanie.lol/pi-react-presentation</a></h6>
+
+		<p id="my-site"><a href="http://stephanie.lol/">stephanie.lol</a></p>
+		<p id="my-name">Stephanie Nemeth<span id="contact-details"><i class="fa fa-twitter"></i> @stephaniecodes</span></p>
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+		<style>
+			#thanks::after {
+				visibility: hidden;
+			}
+			#thanks {
+				background-color: #00BCD4;
+			}
+			#thanks h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:left;
+				font-size:40px;
+				font-family: 'Press Start 2P', cursive;
+			}
+			#thanks h5 {
+				margin:50px 0 30px;
+				color:#B2EBF2;
+				text-align:left;
+				font-size:40px;
+				font-family: 'VT323', cursive;
+				line-height: 100%;
+			}
+			#thanks p {
+				color:#B2EBF2;
+				font-family: 'VT323';
+				font-size:35px;
+			}
+			#my-name {
+				line-height: 120%;
+				margin: 0 0 0;
+				text-align:left;
+			}
+			#thanks a {
+				color:#B2EBF2;
+			}
+			.slide i {
+				font-style: normal;
+			}
+			#contact-details {
+				margin-left:350px;
+			}
+			#my-site {
+				margin: 110px 0 0;
+				line-height: 120%;
+				text-align: right;
+			}
+			#thanks h6 {
+				margin:50px 0 30px;
+				color:#B2EBF2;
+				text-align:left;
+				font-size:35px;
+				font-family: 'VT323', cursive;
+				line-height: 100%;
+			}
+		</style>
 	</section>
 	<!--
 		To hide progress bar from entire presentation
