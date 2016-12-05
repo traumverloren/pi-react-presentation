@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Raspberry Pi + React = Pixel Art 🤖</title>
+	<title>Raspberry Pi + React + Socket.IO = Pixel Art 🤖</title>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="shower/themes/material/styles/screen-16x10.css">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|VT323" rel="stylesheet"> -->
-	<link href
 	<script src="https://use.fontawesome.com/c811b1b704.js"></script>
 </head>
 <body class="shower list">
@@ -41,7 +40,7 @@
 		}
 	</style>
 	<header class="caption">
-		<h1>Raspberry Pi + React = Pixel Art 🤖✨🎨</h1>
+		<h1>Raspberry Pi + Socket.IO + React = Pixel Art 🤖✨🎨</h1>
 		<h5>Adventures in trying out new hardware, code, and having fun in a personal project</h5>
 		<p>By Stephanie Nemeth</p>
 		<style>
@@ -51,13 +50,13 @@
 		.caption h1 {
 		  font-family: 'Press Start 2P', cursive;
 			line-height: 120%;
-		  font-size: 0.6em;
+		  font-size: 0.5em;
 		}
 
 		.caption h5 {
 		  font-family: 'VT323', cursive;
 			color:#B2EBF2;
-			font-size: 0.7em;
+			font-size: 0.6em;
 		}
 		.caption p {
 			margin-top: 10px;
@@ -67,7 +66,7 @@
 		</style>
 	</header>
 	<section class="slide" id="cover">
-		<h2>Raspberry Pi + React</h2>
+		<h2>Raspberry Pi + Socket.IO + React</h2>
 		<h2>= Pixel Art 🤖✨🎨</h2>
 		<h5>Adventures in trying out new hardware, code, and having fun in a personal project</h5>
 		<p id="my-site"><a href="http://stephanie.lol/">stephanie.lol</a></p>
@@ -84,10 +83,10 @@
 				background-color: #00BCD4;
 			}
 			#cover h2 {
-				margin:30px 0 0;
+				margin:30px -30px 0 0;
 				color:#FFF;
 				text-align:left;
-				font-size:40px;
+				font-size:1.1em;
 				font-family: 'Press Start 2P', cursive;
 			}
 			#cover h5 {
@@ -115,7 +114,7 @@
 				font-style: normal;
 			}
 			#contact-details {
-				margin-left:350px;
+				margin-left:318px;
 			}
 			#my-site {
 				margin: 110px 0 0;
@@ -624,7 +623,6 @@
 			<li class="next">Wanna do more than light a single LED but intimidated by soldering or wiring or capacitors straight away?</li>
 			<li class="next">Look into HATs! Easily plugs into your Pi's RGPIO and usually has an established python library available!</li>
 			<li class="next">There's all kinds of HATs...</li>
-			<h2># TODO: ALL THE HATS</h2>
 		</ul>
 		<style>
 			#pi-lessons-2 h2 {
@@ -647,9 +645,7 @@
 			<img class="place bottom left" src="images/drum-hat.jpeg" alt="drum hat" />
 			<img class="place bottom center" src="images/piano-hat.jpeg" alt="piano hat" />
 			<img class="place bottom right" src="images/phat-dac.jpeg" alt="phat dac hat" />
-
 			<p><a href="https://www.pimoroni.co.uk">pimoroni.co.uk</a></p>
-
 		</ul>
 		<style>
 			#all-the-hats h2 {
@@ -669,7 +665,6 @@
 				width: 310px;
 				height: auto;
 				margin-top: -80px;
-
 			}
 		</style>
 	</section>
@@ -775,24 +770,8 @@
 				font-family: 'VT323';
 				font-size:35px;
 			}
-			#my-name {
-				line-height: 120%;
-				margin: 0 0 0;
-				text-align:left;
-			}
 			#thanks a {
 				color:#B2EBF2;
-			}
-			.slide i {
-				font-style: normal;
-			}
-			#contact-details {
-				margin-left:350px;
-			}
-			#my-site {
-				margin: 110px 0 0;
-				line-height: 120%;
-				text-align: right;
 			}
 			#thanks h6 {
 				margin:50px 0 30px;
